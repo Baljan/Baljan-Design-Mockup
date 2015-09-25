@@ -1,0 +1,6 @@
+[submodule "lib/bootstrap"]
+	path = lib/bootstrap
+	url = https://github.com/twbs/bootstrap.git
+[submodule "lib/yamm"]
+	path = lib/yamm
+	url = https://github.com/geedmo/yamm3.git
