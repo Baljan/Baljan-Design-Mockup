@@ -86,53 +86,58 @@
         </div><!-- /.navbar-collapse -->
     </div>
 </nav>
-
 <div class="block box">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Konto</h1>
+                <h1>Beställning</h1>
             </div>
+
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Fyll på</h2>
+                <p> Namn: <br>  <input id="id_orderer" type="text" name="orderer" maxlength="100"> </p>
+
+
+                <p> Email: <br> <input type="text" name="ordererEmail" id="id_ordererEmail"></p>
+
+
+                <p> Telefon:<br><input id="id_phoneNumber" type="text" name="phoneNumber" maxlength="11">
+
+
+                </p><p> Sektion/Förening: <br> <input id="id_association" type="text" name="association" maxlength="40">
+
+            </p>GÖR KLART FORMULÄRET!</div> <!-- End contactInfo -->
+
+
+
+
+
+        <div class="col-md-6">
+            <h2>Observera!</h2>
+            <p>Jobbare i Baljan har inte möjlighet att lämna ut beställningar, det är enbart Baljans styrelsemedlemmar som lämnar ut beställningar.
+
+            Beställningar går endast att hämta ut under våra jourtider:
+            <list><li>Morgon: 07.30 - 08.00</li>
+                <li>Lunch: 12.15 - 13.00 (ej fredagar)</li>
+                <li>Eftermiddag: 16.15 - 17.00
+                </li>
+                </list>
+
+                Baljan fakturerar endast studentföreningar samt sektioner vid Linköpings Universitet. För beställare med fakturaadress utanför Linköpings universitet tillkommer en fakturaavgift på 19 kronor.
+
+            </p>
+
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Fyll på</h2>
-                <p>Värdekort kan köpas på kafét. Om du har frågor eller stöter på problem, <a href="contact.html">kontakta oss</a>. Missbruk loggas. För att importera kaffeklipport, se nedan.
-
-
-                </p>
-                <img src="images/signs.png">
-                <br>
-                <br>
-                <form autocomplete="off" method="POST" action="" class="uniForm"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="RuqZG7AU4LR93NYzV6vkXA2zwUDm8B4Q"></div>
-                    <input type="hidden" name="task" value="refill">
-                    <fieldset class="inlineLabels">
-                        <div id="div_id_code" class="ctrlHolder">
-                            <label for="id_code" class="requiredField">
-                                kod<span class="asteriskField">*</span>
-                            </label>
-                            <input id="id_code" type="text" class="textInput textinput" name="code" maxlength="8">
-                            <div id="hint_id_code" class="formHint"><span class="asteriskField">*</span>står på ditt värdekort</div>
-                        </div>
-                        <div class="form_block submit">
-                            <input type="submit" value="fyll på">
-                        </div>
-                    </fieldset>
-                </form>
-
-
-
-            </div>
-            <div class="col-md-6">
-                <h2>Tillgängligt</h2>
-                KOLLA HUR MYCKET PENGAR SOM FINNS KVAR
-                VARFÖR JAG SKRIVER I CAPS VET JAG INTE
-
-            </div>
         </div>
-    </div>
 </div>
-<div class="pattern"></div>
+
+    </div>
+    <br><br>
+    <div class="pattern"></div>
 <div class="block gray-box">
     <div class="container">
         <div class="row">
