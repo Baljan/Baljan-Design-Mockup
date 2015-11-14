@@ -90,50 +90,92 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Beställning</h1>
+                <h1>Beställa från Baljan</h1>
+                <div class="alert alert-info" role="alert">
+                    <p>Saknar ni något fält eller har någon fundering kring er beställning kan ni lägga till det under ”Övrig information” längst ner i formuläret eller kontakta styrelsen via mail: <a href="mailto:bestallning@baljan.org">bestallning@baljan.org</a>. För att formuläret ska fungera behöver ni ha Javascript aktiverat i webbläsaren, vissa datorsalar på LiU har Javascript avstängt.</p>
+                </div>
             </div>
-
-
-
-
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Fyll på</h2>
-                <p> Namn: <br>  <input id="id_orderer" type="text" name="orderer" maxlength="100"> </p>
-
-
-                <p> Email: <br> <input type="text" name="ordererEmail" id="id_ordererEmail"></p>
-
-
-                <p> Telefon:<br><input id="id_phoneNumber" type="text" name="phoneNumber" maxlength="11">
-
-
-                </p><p> Sektion/Förening: <br> <input id="id_association" type="text" name="association" maxlength="40">
-
-            </p>GÖR KLART FORMULÄRET!</div> <!-- End contactInfo -->
-
-
-
-
-
-        <div class="col-md-6">
-            <h2>Observera!</h2>
-            <p>Jobbare i Baljan har inte möjlighet att lämna ut beställningar, det är enbart Baljans styrelsemedlemmar som lämnar ut beställningar.
-
-            Beställningar går endast att hämta ut under våra jourtider:
-            <list><li>Morgon: 07.30 - 08.00</li>
-                <li>Lunch: 12.15 - 13.00 (ej fredagar)</li>
-                <li>Eftermiddag: 16.15 - 17.00
-                </li>
-                </list>
-
-                Baljan fakturerar endast studentföreningar samt sektioner vid Linköpings Universitet. För beställare med fakturaadress utanför Linköpings universitet tillkommer en fakturaavgift på 19 kronor.
-
-            </p>
-
         </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" class="form-horizontal">
+                    <h2>Kontaktuppgiter</h2>
+                    <div class="form-group">
+                        <label for="id_orderer" class="col-sm-4 control-label">Namn</label>
+                        <div class="col-sm-8">
+                            <input id="id_orderer" type="text" name="orderer" maxlength="100" class="form-control" placeholder="Namn">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_ordererEmail" class="col-sm-4 control-label">Email</label>
+                        <div class="col-sm-8">
+                            <input id="id_ordererEmail" type="email" name="ordererEmail" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_phoneNumber" class="col-sm-4 control-label">Telefon</label>
+                        <div class="col-sm-8">
+                            <input id="id_phoneNumber" type="tel" name="phoneNumber" maxlength="11" class="form-control" placeholder="Telefon">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_association" class="col-sm-4 control-label">Sektion/Förening</label>
+                        <div class="col-sm-8">
+                            <input id="id_association" type="text" name="association" maxlength="40" class="form-control" placeholder="Sektion/Förening">
+                        </div>
+                    </div>
+
+                    <h2>Kontaktuppgiter uthämtare</h2>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <div class="checkbox">
+                                <label>
+                                    <input checked="checked" type="checkbox" name="sameAsOrderer" id="id_sameAsOrderer">  Samma som beställare
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_pickupName" class="col-sm-4 control-label">Namn</label>
+                        <div class="col-sm-8">
+                            <input id="id_pickupName" type="text" name="pickupName" maxlength="100" class="form-control" placeholder="Namn" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_pickupEmail" class="col-sm-4 control-label">Email</label>
+                        <div class="col-sm-8">
+                            <input id="id_pickupEmail" type="email" name="pickupEmail" class="form-control" placeholder="Email" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_pickupNumber" class="col-sm-4 control-label">Telefon</label>
+                        <div class="col-sm-8">
+                            <input id="id_pickupNumber" type="tel" name="pickupNumber" maxlength="11" class="form-control" placeholder="Telefon" disabled>
+                        </div>
+                    </div>
+
+                    <h2>Beställning</h2>
+
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="alert alert-warning" role="alert">
+                    <h2>Observera!</h2>
+                    <p>Jobbare i Baljan har inte möjlighet att lämna ut beställningar, det är enbart Baljans styrelsemedlemmar som lämnar ut beställningar.</p>
+
+                    <p>Beställningar går endast att hämta ut under våra jourtider:</p>
+                    <ul>
+                        <li>Morgon: 07.30 - 08.00</li>
+                        <li>Lunch: 12.15 - 13.00 (ej fredagar)</li>
+                        <li>Eftermiddag: 16.15 - 17.00</li>
+                    </ul>
+
+                    <p>Baljan fakturerar endast studentföreningar samt sektioner vid Linköpings Universitet. För beställare med fakturaadress utanför Linköpings universitet tillkommer en fakturaavgift på 19 kronor.</p>
+                </div>
+            </div>
         </div>
-</div>
+        Mer kvar att göra!
 
     </div>
     <br><br>

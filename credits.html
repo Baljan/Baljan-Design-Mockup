@@ -97,37 +97,62 @@
         <div class="row">
             <div class="col-md-6">
                 <h2>Fyll på</h2>
-                <p>Värdekort kan köpas på kafét. Om du har frågor eller stöter på problem, <a href="contact.html">kontakta oss</a>. Missbruk loggas. För att importera kaffeklipport, se nedan.
-
-
+                <p>Värdekort kan köpas på kafét. Om du har frågor eller stöter på problem, <a href="contact.html">kontakta oss</a>. Missbruk loggas.</p>
+                <p>
+                    <img src="images/signs.png" alt="Skillnader mellan litet i, litet l, en etta och stort I.">
                 </p>
-                <img src="images/signs.png">
-                <br>
-                <br>
-                <form autocomplete="off" method="POST" action="" class="uniForm"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="RuqZG7AU4LR93NYzV6vkXA2zwUDm8B4Q"></div>
-                    <input type="hidden" name="task" value="refill">
-                    <fieldset class="inlineLabels">
-                        <div id="div_id_code" class="ctrlHolder">
-                            <label for="id_code" class="requiredField">
-                                kod<span class="asteriskField">*</span>
-                            </label>
-                            <input id="id_code" type="text" class="textInput textinput" name="code" maxlength="8">
-                            <div id="hint_id_code" class="formHint"><span class="asteriskField">*</span>står på ditt värdekort</div>
+                <form autocomplete="off" method="POST" action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="id_code" class="col-sm-2 control-label">kod<span class="asteriskField">*</span></label>
+                        <div class="col-sm-10">
+                            <input id="id_code" type="text" class="form-control" name="code" maxlength="8" placeholder="kod" required aria-describedby="helpBlock">
                         </div>
-                        <div class="form_block submit">
-                            <input type="submit" value="fyll på">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <span id="helpBlock" class="help-block"><span class="asteriskField">*</span>står på ditt värdekort</span>
                         </div>
-                    </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Fyll på</button>
+                        </div>
+                    </div>
                 </form>
 
 
 
             </div>
             <div class="col-md-6">
-                <h2>Tillgängligt</h2>
-                KOLLA HUR MYCKET PENGAR SOM FINNS KVAR
-                VARFÖR JAG SKRIVER I CAPS VET JAG INTE
-
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Tillgängligt</h2>
+                        <div class="credits">
+                            <span>0 SEK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>LiU-kort fungerar automatiskt</h2>
+                        <p>LiU-kortnummer importeras automatiskt. Detta betyder att nya användare inte längre behöver fylla i ett nummer på webbplatsen.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Plånboksblipp</h2>
+                        <p>Om din plånbok är gjord av vanligt plånboksmaterial och inte innehåller något busskort (eller annan RFID-tag av samma typ) så kan du blippa genom den. Om du är duktig på att blippa är det möjligt att du kan använda plånboken även om du har andra kort i den (tips: LiU-kortet närmast läsaren).</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Använda värdekort</h2>
+                        <ul>
+                            <li>kort 190.3951 värt 250 SEK användes 2013-10-11</li>
+                            <li>kort 145.3236 värt 250 SEK användes 2013-04-18</li>
+                            <li>kort 123.2871 värt 250 SEK användes 2013-01-23</li>
+                            <li>kort 90.2379 värt 250 SEK användes 2012-09-25</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
