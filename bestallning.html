@@ -104,19 +104,19 @@
                     <div class="form-group">
                         <label for="id_orderer" class="col-sm-4 control-label">Namn</label>
                         <div class="col-sm-8">
-                            <input id="id_orderer" type="text" name="orderer" maxlength="100" class="form-control" placeholder="Namn">
+                            <input id="id_orderer" type="text" name="orderer" maxlength="100" class="form-control" placeholder="Namn" data-pickup="#id_pickupName">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="id_ordererEmail" class="col-sm-4 control-label">Email</label>
                         <div class="col-sm-8">
-                            <input id="id_ordererEmail" type="email" name="ordererEmail" class="form-control" placeholder="Email">
+                            <input id="id_ordererEmail" type="email" name="ordererEmail" class="form-control" placeholder="Email" data-pickup="#id_pickupEmail">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="id_phoneNumber" class="col-sm-4 control-label">Telefon</label>
                         <div class="col-sm-8">
-                            <input id="id_phoneNumber" type="tel" name="phoneNumber" maxlength="11" class="form-control" placeholder="Telefon">
+                            <input id="id_phoneNumber" type="tel" name="phoneNumber" maxlength="11" class="form-control" placeholder="Telefon" data-pickup="#id_pickupNumber">
                         </div>
                     </div>
                     <div class="form-group">
@@ -156,7 +156,78 @@
                     </div>
 
                     <h2>Beställning</h2>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <label class="btn btn-default"><input type="checkbox">Left</label>
+                        <label class="btn btn-default"><input type="checkbox">Left</label>
+                    </div>
+                    Lägg till produkter och datum-hanteringen nedan.
 
+
+                    <h2> Uthämtning </h2>
+
+                    <!--<script>
+                        $(function() {
+                            $( "#id_date" ).datepicker({
+                                minDate: +1,
+                                showWeek: true,
+                                dateFormat:"yy-mm-dd",
+                                firstDay: 1,
+                                beforeShowDay: $.datepicker.noWeekends
+                            });
+                            $.datepicker.regional['sv'] = {
+                                closeText: 'Stäng',
+                                prevText: '&laquo;Förra',
+                                nextText: 'Nästa&raquo;',
+                                currentText: 'Idag',
+                                monthNames: ['Januari','Februari','Mars','April','Maj','Juni',
+                                    'Juli','Augusti','September','Oktober','November','December'],
+                                monthNamesShort: ['Jan','Feb','Mar','Apr','Maj','Jun',
+                                    'Jul','Aug','Sep','Okt','Nov','Dec'],
+                                dayNamesShort: ['Sön','Mån','Tis','Ons','Tor','Fre','Lör'],
+                                dayNames: ['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'],
+                                dayNamesMin: ['Sö','Må','Ti','On','To','Fr','Lö'],
+                                weekHeader: 'Ve',
+                                dateFormat: 'yy-mm-dd',
+                                maxDate: "15-12-18",
+                                firstDay: 1,
+                                isRTL: false,
+                                showMonthAfterYear: false,
+                                yearSuffix: ''};
+                            $.datepicker.setDefaults($.datepicker.regional['sv']);
+                        });
+                    </script>-->
+                    <div class="form-group">
+                        <label for="id_date" class="col-sm-4 control-label">Datum</label>
+                        <div class="col-sm-8">
+                            <input readonly="readonly" type="text" name="date" id="id_date" class="hasDatepicker form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_pickup" class="col-sm-4 control-label">Tid för uthämtning</label>
+                        <div class="col-sm-8">
+                            <select name="pickup" id="id_pickup" class="form-control">
+                                <option value="Morgon 07:30-08:00">Morgon 07:30-08:00</option>
+                                <option value="Lunch 12:15-13:00 (ej fredagar)">Lunch 12:15-13:00 (ej fredagar)</option>
+                                <option value="Eftermiddag 16:15-17:00">Eftermiddag 16:15-17:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_other" class="col-sm-4 control-label">Övrig information</label>
+                        <div class="col-sm-8">
+                            <textarea id="id_other" rows="5" cols="33" name="other" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <div class="alert alert-info" role="alert">Ni kommer få en bekräftelse att er beställning är tillagd när styrelsen har tagit emot den.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <button type="submit" onclick="return validate()" class="btn btn-primary">Skicka beställning</button>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="col-md-6">
@@ -173,6 +244,41 @@
 
                     <p>Baljan fakturerar endast studentföreningar samt sektioner vid Linköpings Universitet. För beställare med fakturaadress utanför Linköpings universitet tillkommer en fakturaavgift på 19 kronor.</p>
                 </div>
+
+                <h2>Hur mycket kan man beställa?</h2>
+                <p>På grund av begränsningar i hur mycket kaffe vi kan koka samt hur mycket vi kan förvara har vi följade gränser:</p>
+                <ul>
+                    <li>Kaffe: minst 5, Morgon max 45, Lunch max 90, Eftermiddag max 135</li>
+                    <li>Te: minst 5, max 45</li>
+                    <li>Jochen: minst 5, max 200</li>
+                    <li>Läsk/vatten: minst 5, max 200</li>
+                    <li>Klägg: minst 5, max 300</li>
+                </ul>
+                <p>Beställer ni över 100 stycken jochen måste ni hämta ut beställningen på morgonen (07.30-08.00) då vi inte möjlighet att förvara dessa i våra kylar.</p>
+
+
+                <h2> Vad gäller? </h2>
+                <p>Följade gäller vid beställningar:</p>
+
+                <h3> Kaffe/te </h3>
+                <ul>
+                    <li>På grund av termosstorlekar kan vi eventuellt behöva justera antalet kaffe eller te i er beställning. <a href="/baljan/price-list"> Klicka här för att se våra termosstorlekar.</a></li>
+                    <li>Koppar, skedar, socker och mjölk ingår vid beställning av kaffe och te. <br></li>
+                </ul>
+
+                <h3> Jochen </h3>
+                <ul>
+                    <li>Beställning av jochen måste vara inne <b>senast klockan tolv två arbetsdagar i förväg</b>.</li>
+
+                    <li>Vi erbjuder även laktosfria samt vegetariska jochen, önskas detta kan ni lägga till det under ”Övrig information”. Vi kan tyvärr ej erbjuda glutenfria jochen.</li>
+                </ul>
+
+                <h3> Läsk/vatten </h3>
+                <ul>
+                    <li> Vid beställningar på över 100 stycken av samma sort är det bra att kontakta Baljan i god tid. Vid köp av fulla backar betalar man även pant. Lämnar man tillbaka fulla backar kan panten skrivas av från fakturan om den lämnas tillbaka senast dagen efter.</li>
+                    <li>Har ni speciella önskemål på vilka sorter av läsk eller vatten ni vill ha kan ni specificera detta under ”Övrig information”.</li>
+                </ul>
+
             </div>
         </div>
         Mer kvar att göra!
