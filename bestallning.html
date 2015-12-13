@@ -161,19 +161,19 @@
                         <div class="col-sm-offset-4 col-sm-8">
                             <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-default" data-toggle="collapse" data-target="#jochenField">
-                                    <input type="checkbox" autocomplete="off"> Jochen
+                                    <input type="checkbox" name="selected-products" value="jochen" autocomplete="off"> Jochen
                                 </label>
                                 <label class="btn btn-default" data-toggle="collapse" data-target="#coffeeField">
-                                    <input type="checkbox" autocomplete="off"> Kaffe
+                                    <input type="checkbox" name="selected-products" value="coffee" autocomplete="off"> Kaffe
                                 </label>
                                 <label class="btn btn-default" data-toggle="collapse" data-target="#teaField">
-                                    <input type="checkbox" autocomplete="off"> Te
+                                    <input type="checkbox" name="selected-products" value="tea" autocomplete="off"> Te
                                 </label>
                                 <label class="btn btn-default" data-toggle="collapse" data-target="#sodaField">
-                                    <input type="checkbox" autocomplete="off"> Läsk
+                                    <input type="checkbox" name="selected-products" value="soda" autocomplete="off"> Läsk
                                 </label>
                                 <label class="btn btn-default" data-toggle="collapse" data-target="#klaggField">
-                                    <input type="checkbox" autocomplete="off"> Klägg
+                                    <input type="checkbox" name="selected-products" value="klagg" autocomplete="off"> Klägg
                                 </label>
                             </div>
                         </div>
@@ -182,33 +182,37 @@
                     <div class="form-group collapse" id="jochenField">
                         <label for="id_numberOfJochen" class="col-sm-4 control-label">Antal Jochen</label>
                         <div class="col-sm-8">
-                            <input id="id_numberOfJochen" type="number" name="numberOfJochen" class="form-control" placeholder="Antal Jochen">
+                            <input id="id_numberOfJochen" type="number" name="numberOfJochen" class="form-control product" placeholder="Antal Jochen" data-price="30">
                         </div>
                     </div>
                     <div class="form-group collapse" id="coffeeField">
                         <label for="id_numberOfCoffee" class="col-sm-4 control-label">Antal Kaffe</label>
                         <div class="col-sm-8">
-                            <input id="id_numberOfCoffee" type="number" name="numberOfCoffee" class="form-control" placeholder="Antal Kaffe">
+                            <input id="id_numberOfCoffee" type="number" name="numberOfCoffee" class="form-control product" placeholder="Antal Kaffe" data-price="5">
                         </div>
                     </div>
                     <div class="form-group collapse" id="teaField">
                         <label for="id_numberOfTea" class="col-sm-4 control-label">Antal Te</label>
                         <div class="col-sm-8">
-                            <input id="id_numberOfTea" type="number" name="numberOfTea" class="form-control" placeholder="Antal Te">
+                            <input id="id_numberOfTea" type="number" name="numberOfTea" class="form-control product" placeholder="Antal Te" data-price="5">
                         </div>
                     </div>
                     <div class="form-group collapse" id="sodaField">
                         <label for="id_numberOfSoda" class="col-sm-4 control-label">Antal Läsk</label>
                         <div class="col-sm-8">
-                            <input id="id_numberOfSoda" type="number" name="numberOfSoda" class="form-control" placeholder="Antal Läsk">
+                            <input id="id_numberOfSoda" type="number" name="numberOfSoda" class="form-control product" placeholder="Antal Läsk" data-price="5">
                         </div>
                     </div>
                     <div class="form-group collapse" id="klaggField">
                         <label for="id_numberOfKlagg" class="col-sm-4 control-label">Antal Klägg</label>
                         <div class="col-sm-8">
-                            <input id="id_numberOfKlagg" type="number" name="numberOfKlagg" class="form-control" placeholder="Antal Klägg">
+                            <input id="id_numberOfKlagg" type="number" name="numberOfKlagg" class="form-control product" placeholder="Antal Klägg" data-price="5">
                         </div>
                     </div>
+
+                    <h2>Summa</h2>
+
+                    <div class="well well-bold" id="sum" data-currency="SEK">0 SEK</div>
 
 
                     Lägg till produkter och datum-hanteringen nedan.

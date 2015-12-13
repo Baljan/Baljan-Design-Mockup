@@ -16,25 +16,23 @@ $(function (){
   $("#id_orderer, #id_ordererEmail, #id_phoneNumber").bind("input", function () {
     $($(this).data("pickup")).val($(this).val());
   });
+
+  $(".product").bind("input", function () {
+    // TODO: Complete Calculation of order sum
+    if (isNaN(parseInt($(this).val()))) {
+      $(this).val(0);
+    }
+
+    //$("#sum").val("");
+    $("input[name=selected-products]:checked").each(function () {
+
+    });
+  });
 });
 
 function initialize() {
   var baljanLatLng = new google.maps.LatLng(58.4008713, 15.578388);
-  /*var map = new google.maps.Map(document.getElementById('map-container'), {
-    zoom: 18,
-    center: baljanLatLng
-  });
-  var baljan = new.google.Place({
-    place: "ChIJEVWHH29vWUYRxtSDTcmejw8"
-  });
-  var marker = new google.maps.Marker({
-    //position: baljanLatLng,
-    place: new google.maps.Place({placeId: })
-    title: "Sektionscafé Baljan"
-  });
-  marker.setMap(map);*/
-    
-    
+
   var map = new google.maps.Map(document.getElementById('map-container'), {
     center: baljanLatLng,
     zoom: 18,
