@@ -18,17 +18,27 @@ $(function (){
   });
 
   $(".product").bind("input", function () {
-    // TODO: Complete Calculation of order sum
-    if (isNaN(parseInt($(this).val()))) {
-      $(this).val(0);
+    var quantity = parseInt($(this).val());
+    if (isNaN(quantity) || quantity < 0) {
+      $(this).val("");
     }
 
-    //$("#sum").val("");
-    $("input[name=selected-products]:checked").each(function () {
+    calculateSum();
+  });
 
-    });
+  $("input[name=selected-products]").bind("change", function () {
+    calculateSum();
   });
 });
+
+function calculateSum() {
+  var sum = 0;
+  $("input[name=selected-products]:checked").each(function () {
+    var target = $($(this).parent().data("target") + " input");
+    sum += $(target).val() * $(target).data("price");
+  });
+  $("#sum").html(sum + " " + $("#sum").data("currency"));
+}
 
 function initialize() {
   var baljanLatLng = new google.maps.LatLng(58.4008713, 15.578388);
