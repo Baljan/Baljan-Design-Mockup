@@ -47,11 +47,9 @@
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#" title="Sektionscafé Baljan">
               <img src="logga.png" alt="Sektionscafé Baljan">
@@ -59,40 +57,58 @@
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="collapse navbar-collapse" id="collapsable-navbar">
               <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Hem <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Beställa</a></li>
-                  <li><a href="#">Kaffekort</a></li>
-                  <li><a href="#">Topplista</a></li>
-                <li><a href="#contact">Kontakta oss</a></li>
+                  <li class="active"><a href="#"><i class="fa fa-home"></i> Hem <span class="sr-only">(current)</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i> Beställa</a></li>
+                  <li><a href="#"><i class="fa fa-coffee"></i> Kaffekort</a></li>
+                  <li><a href="#"><i class="fa fa-trophy"></i> Topplista</a></li>
+                <li><a href="#contact"><i class="fa fa-envelope"></i> Kontakta oss</a></li>
               </ul>
             
               <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Logga in"><i class="fa fa-sign-in"></i></a>
+                  <li class="dropdown yamm-fw">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-label="Meny" aria-haspopup="true" aria-expanded="false" title="Meny"><i class="fa fa-bars"></i> <span class="visible-xs-inline-block" aria-hidden="true">Meny</span></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <div class="yamm-content">
-                          <div class="row">
-                            <div class="col-xs-12">
-                              <form>
-                                <div class="form-group">
-                                  <label for="loginUsername" class="sr-only">Användarnamn</label>
-                                  <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" id="loginUsername" placeholder="Användarnamn">
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="loginPassword" class="sr-only">Lösenord</label>
-                                  <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                                    <input type="password" class="form-control" id="loginPassword" placeholder="Lösenord">
-                                  </div>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Logga in</button>
-                              </form>
+                        <div class="container">
+                          <div class="yamm-content">
+                            <div class="row">
+                              <div class="col-xs-6 col-sm-3">
+                                <strong>Ditt konto</strong>
+                                <ul>
+                                  <li><a href="#">Profil</a></li>
+                                  <li><a href="#">Konto</a></li>
+                                  <li><a href="#">Köp</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-xs-6 col-sm-3">
+                                <strong>Styrelsen</strong>
+                                <ul>
+                                  <li><a href="#">Veckoplanering</a></li>
+                                  <li><a href="#">Wiki</a></li>
+                                  <li><a href="#">Jobbsläpp VT2016</a></li>
+                                  <li><a href="#">Terminer</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-xs-6 col-sm-3">
+                                <strong>Jobbare</strong>
+                                <ul>
+                                  <li><a href="#">Jobbguide</a></li>
+                                  <li><a href="#">Kontrakt</a></li>
+                                  <li><a href="#">Visa pass i kalenderprogram</a></li>
+                                  <li><a href="#">Jobbplanering</a></li>
+                                  <li><a href="#">Personer och grupper</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-xs-6 col-sm-3">
+                                <strong>Nördar / Sysadmins</strong>
+                                <ul>
+                                  <li><a href="#">Djangos adminsida</a></li>
+                                  <li><a href="#">Sentry</a></li>
+                                  <li><a href="#">GitHub</a></li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -180,6 +196,14 @@
             <strong>Telefon</strong><br>
             <a href="tel:+4613259927">013-25 99 27</a>
           </address>
+          <p>
+            <strong>Organisationsnummer</strong><br>
+            822001-7779
+          </p>
+          <p>
+            <strong>Bankgironummer</strong><br>
+            484-8941
+          </p>
         </div>
         <div class="col-sm-6">
           <div class="row">
@@ -254,7 +278,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <p class="pull-left">Copyright &copy; Sektionscafé Baljan. All rights reserved.</p>
+          <p class="pull-left">Copyright &copy; 2015 Sektionscafé Baljan. All rights reserved.</p>
           <div class="social pull-right">
             <a href="https://www.facebook.com/sektionscafe.baljan">
               <i class="fa fa-facebook"></i>
@@ -264,6 +288,9 @@
             </a>
             <a href="#">
               <i class="fa fa-google-plus"></i>
+            </a>
+            <a href="https://github.com/Baljan/">
+              <i class="fa fa-github-alt"></i>
             </a>
           </div>
         </div>
