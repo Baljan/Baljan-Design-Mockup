@@ -47,7 +47,7 @@
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsible-navbar">
               <span class="sr-only">Toggle navigation</span>
               <i class="fa fa-bars"></i>
             </button>
@@ -57,18 +57,20 @@
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="collapsable-navbar">
+          <div class="collapse navbar-collapse" id="collapsible-navbar">
               <ul class="nav navbar-nav">
-                  <li class="active"><a href="#"><i class="fa fa-home"></i> Hem <span class="sr-only">(current)</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i> Beställa</a></li>
-                  <li><a href="#"><i class="fa fa-coffee"></i> Kaffekort</a></li>
-                  <li><a href="#"><i class="fa fa-trophy"></i> Topplista</a></li>
-                <li><a href="#contact"><i class="fa fa-envelope"></i> Kontakta oss</a></li>
+                <li class="active"><a href="#"><i class="fa fa-home"></i><span class="hidden-sm"> Hem <span class="sr-only">(current)</span></span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i><span class="hidden-sm"> Beställa</span></a></li>
+                <li><a href="#"><i class="fa fa-money"></i><span class="hidden-sm"> Priser</span></a></li>
+                <li><a href="#"><i class="fa fa-coffee"></i><span class="hidden-sm"> Kaffekort</span></a></li>
+                <li><a href="#"><i class="fa fa-trophy"></i><span class="hidden-sm"> Topplista</span></a></li>
+                <li><a href="#"><i class="fa fa-info-circle"></i><span class="hidden-sm"> Faq</span></a></li>
+                <li><a href="#contact"><i class="fa fa-envelope"></i><span class="hidden-sm"> Kontakta oss</span></a></li>
               </ul>
             
               <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-label="Meny" aria-haspopup="true" aria-expanded="false" title="Meny"><i class="fa fa-bars"></i> <span class="visible-xs-inline-block" aria-hidden="true">Meny</span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-label="Meny" aria-haspopup="true" aria-expanded="false" title="Meny" data-tooltip="menu"><i class="fa fa-bars"></i><span class="visible-xs-inline" aria-hidden="true"> Meny</span></a>
                     <ul class="dropdown-menu">
                       <li>
                         <div class="container">
@@ -80,6 +82,7 @@
                                   <li><a href="#">Profil</a></li>
                                   <li><a href="#">Konto</a></li>
                                   <li><a href="#">Köp</a></li>
+                                  <li><a href="#">Logga ut</a></li>
                                 </ul>
                               </div>
                               <div class="col-xs-6 col-sm-3">
@@ -115,6 +118,8 @@
                       </li>
                     </ul>
                   </li>
+                <li><a href="#" aria-label="Profil" title="Profil" data-tooltip="menu"><i class="fa fa-user"></i><span class="visible-xs-inline" aria-hidden="true"> Profil</span></a></li>
+                <li><a href="#" aria-label="Logga ut" title="Logga ut" data-tooltip="menu"><i class="fa fa-sign-out"></i><span class="visible-xs-inline" aria-hidden="true"> Logga ut</span></a></li>
               </ul>
           </div><!-- /.navbar-collapse -->
       </div>

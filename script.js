@@ -6,6 +6,10 @@ $(function (){
       $("#id_orderer, #id_ordererEmail, #id_phoneNumber").bind("input", function () {
         $($(this).data("pickup")).val($(this).val());
       });
+
+      $("#id_orderer, #id_ordererEmail, #id_phoneNumber").each(function () {
+        $($(this).data("pickup")).val($(this).val());
+      });
     }
     else {
       $("#id_pickupName, #id_pickupEmail, #id_pickupNumber").removeAttr("disabled");
@@ -28,6 +32,27 @@ $(function (){
 
   $("input[name=selected-products]").bind("change", function () {
     calculateSum();
+  });
+
+  $('[data-tooltip="menu"]').tooltip({'placement': 'bottom', 'trigger': 'hover'});
+
+  $('#collapsible-navbar').on('hidden.bs.collapse', function () {
+    alert("Hej");
+  });
+
+  $('.input-group.date').datepicker({
+    autoclose: true,
+    format: "yyyy-mm-dd",
+    weekStart: 1,
+    startDate: "0",
+    endDate: "2015-12-18",
+    maxViewMode: 1,
+    todayBtn: "linked",
+    language: "sv",
+    daysOfWeekDisabled: "0,6",
+    calendarWeeks: true,
+    todayHighlight: true
+    //datesDisabled: ['12/06/2015', '12/21/2015']
   });
 });
 

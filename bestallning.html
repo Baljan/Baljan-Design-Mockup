@@ -15,6 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
     <link href="lib/yamm/yamm/yamm.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
 
@@ -214,47 +215,16 @@
 
                     <div class="well well-bold" id="sum" data-currency="SEK">0 SEK</div>
 
-
-                    Lägg till produkter och datum-hanteringen nedan.
-
-
                     <h2> Uthämtning </h2>
 
-                    <!--<script>
-                        $(function() {
-                            $( "#id_date" ).datepicker({
-                                minDate: +1,
-                                showWeek: true,
-                                dateFormat:"yy-mm-dd",
-                                firstDay: 1,
-                                beforeShowDay: $.datepicker.noWeekends
-                            });
-                            $.datepicker.regional['sv'] = {
-                                closeText: 'Stäng',
-                                prevText: '&laquo;Förra',
-                                nextText: 'Nästa&raquo;',
-                                currentText: 'Idag',
-                                monthNames: ['Januari','Februari','Mars','April','Maj','Juni',
-                                    'Juli','Augusti','September','Oktober','November','December'],
-                                monthNamesShort: ['Jan','Feb','Mar','Apr','Maj','Jun',
-                                    'Jul','Aug','Sep','Okt','Nov','Dec'],
-                                dayNamesShort: ['Sön','Mån','Tis','Ons','Tor','Fre','Lör'],
-                                dayNames: ['Söndag','Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag'],
-                                dayNamesMin: ['Sö','Må','Ti','On','To','Fr','Lö'],
-                                weekHeader: 'Ve',
-                                dateFormat: 'yy-mm-dd',
-                                maxDate: "15-12-18",
-                                firstDay: 1,
-                                isRTL: false,
-                                showMonthAfterYear: false,
-                                yearSuffix: ''};
-                            $.datepicker.setDefaults($.datepicker.regional['sv']);
-                        });
-                    </script>-->
                     <div class="form-group">
                         <label for="id_date" class="col-sm-4 control-label">Datum</label>
                         <div class="col-sm-8">
-                            <input readonly="readonly" type="text" name="date" id="id_date" class="hasDatepicker form-control">
+
+                            <div class="input-group date">
+                                <input readonly="readonly" type="text" name="date" id="id_date" class="hasDatepicker form-control">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -336,8 +306,6 @@
 
             </div>
         </div>
-        Mer kvar att göra!
-
     </div>
 </div>
 <div class="pattern"></div>
@@ -372,6 +340,8 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/locales/bootstrap-datepicker.sv.min.js"></script>
 <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>-->
 <script src="script.js"></script>
 </body>

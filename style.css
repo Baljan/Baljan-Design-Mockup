@@ -40,10 +40,17 @@ body {
   color: #f70079;
   background-color: transparent;
 }
+.navbar-right li.dropdown:not(.yamm-fw) {
+  position: relative;
+}
+
+.yamm .dropdown-menu {
+  min-width: 260px;
+}
 
 .yamm-content .input-group-addon, 
 .yamm-content .input-group-btn {
-  width: inherit;
+  width: 39px;
 }
 
 .yamm .dropdown.yamm-fw .dropdown-menu {
@@ -74,7 +81,7 @@ li.yamm-fw.open > a:after {
   left: 50%;
   bottom: -10px;
   position: absolute;
-  z-index: 2000;
+  z-index: 1060;
   margin-left: -12px;
 }
 
@@ -160,62 +167,9 @@ h1 {
 .welcome-message h1 {
   margin: auto auto;
   padding: 10px;
-  /*animation-name: intro-heading;
-  animation-duration: 1s;
-  -webkit-animation-name: intro-heading;
-  -webkit-animation-duration: 1s;
-  -moz-animation-name: intro-heading;
-  -moz-animation-duration: 1s;
-  -o-animation-name: intro-heading;
-  -o-animation-duration: 1s;
-  position: relative;
-  left: 0;*/
   font-size: 10em;
-  text-shadow: 2px 2px 1px #fff;
-}
-
-@keyframes intro-heading {
-  from {
-    opacity: 0;
-    left: -50%;
-  }
-  to {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-@-webkit-keyframes intro-heading {
-  from {
-    opacity: 0;
-    left: -50%;
-  }
-  to {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-@-moz-keyframes intro-heading {
-  from {
-    opacity: 0;
-    left: -50%;
-  }
-  to {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-@-o-keyframes intro-heading {
-  from {
-    opacity: 0;
-    left: -50%;
-  }
-  to {
-    opacity: 1;
-    left: 0;
-  }
+  /*text-shadow: 2px 2px 1px #fff;*/
+  text-shadow: 0.02em 0.02em 0.01em #fff;
 }
 
 .welcome-message p {
@@ -223,68 +177,8 @@ h1 {
   font-size: 2em;
   text-shadow: 1px 1px 5px #000;
   position: relative;
-  /*animation-name: intro-paragraph;
-  animation-duration: 0.5s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: intro-paragraph;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-delay: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-name: intro-paragraph;
-  -moz-animation-duration: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -moz-animation-fill-mode: forwards;
-  -o-animation-name: intro-paragraph;
-  -o-animation-duration: 0.5s;
-  -o-animation-delay: 0.5s;
-  -o-animation-fill-mode: forwards;*/
   bottom: 0;
   /*opacity: 0;*/
-}
-
-@keyframes intro-paragraph {
-  from {
-    opacity: 0;
-    bottom: -50%;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-
-@-webkit-keyframes intro-paragraph {
-  from {
-    opacity: 0;
-    bottom: -50%;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-
-@-moz-keyframes intro-paragraph {
-  from {
-    opacity: 0;
-    bottom: -50%;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-
-@-o-keyframes intro-paragraph {
-  from {
-    opacity: 0;
-    bottom: -50%;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
 }
 
 .box {
@@ -528,11 +422,13 @@ a:hover, a:focus {
 ::-moz-selection {
   color: #fff;
   background: #f70079;
+  text-shadow: none;
 }
 
 ::selection {
   color: #fff; 
   background: #f70079;
+  text-shadow: none;
 }
 
 .well-bold {
